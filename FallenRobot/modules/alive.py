@@ -17,11 +17,11 @@ PHOTO = [
 
 @register(pattern=("/alive"))
 async def awake(event):
-    TEXT = f"**ʜᴇʏ​ [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\nɪ ᴀᴍ {dispatcher.bot.first_name}**\n━━━━━━━━━━━━━━━━━━━\n\n"
-    TEXT += f"» **ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ​ : [DarkiezZzz](https://t.me/{OWNER_USERNAME})** \n\n"
-    TEXT += f"» **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
-    TEXT += f"» **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
-    TEXT += f"» **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n━━━━━━━━━━━━━━━━━\n\n"
+    TEXT = f"**Hay​ [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\nSaya {dispatcher.bot.first_name}**\n━━━━━━━━━━━━━━━━━━━\n\n"
+    TEXT += f"» **Developer​ : [DarkiezZzz](https://t.me/{OWNER_USERNAME})** \n\n"
+    TEXT += f"» **Library versi :** `{telever}` \n\n"
+    TEXT += f"» **Telethon versi :** `{tlhver}` \n\n"
+    TEXT += f"» **Pyrogram :** `{pyrover}` \n━━━━━━━━━━━━━━━━━\n\n"
     BUTTON = [
         [
             Button.url("ʜᴇʟᴘ​", f"https://t.me/{dispatcher.bot.username}?start=help"),
