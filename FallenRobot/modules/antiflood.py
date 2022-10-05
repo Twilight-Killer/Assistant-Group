@@ -85,7 +85,7 @@ def check_flood(update, context) -> str:
             execstrings = "Muted for {}".format(getvalue)
             tag = "TMUTE"
         send_message(
-            update.effective_message, "Kamu rusuh di grup. sekarang\n{}!".format(execstrings)
+            update.effective_message, "Kamu SPAM di grup ini. sekarang\n{}!".format(execstrings)
         )
 
         return (
