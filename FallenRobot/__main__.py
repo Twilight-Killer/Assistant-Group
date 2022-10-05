@@ -772,7 +772,7 @@ def main():
                 f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ {BOT_NAME} IS ACTIVE
+🔥 {BOT_NAME} IS ACTIVE 🔥
 
 ┏•❅────✧❅✦❅✧────❅•┓
 ㅤ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
