@@ -83,7 +83,7 @@ def report(update: Update, context: CallbackContext) -> str:
         message = update.effective_message
 
         if not args:
-            message.reply_text("Add a reason for reporting first.")
+            message.reply_text("Gunakan /report untuk melaporkan.")
             return ""
 
         if user.id == reported_user.id:
@@ -91,7 +91,7 @@ def report(update: Update, context: CallbackContext) -> str:
             return ""
 
         if user.id == bot.id:
-            message.reply_text("Nice try.")
+            message.reply_text("Usaha yang bagus.")
             return ""
 
         if reported_user.id in REPORT_IMMUNE_USERS:
@@ -100,10 +100,10 @@ def report(update: Update, context: CallbackContext) -> str:
 
         if chat.username and chat.type == Chat.SUPERGROUP:
 
-            reported = f"{mention_html(user.id, user.first_name)} reported {mention_html(reported_user.id, reported_user.first_name)} to the admins!"
+            reported = f"{mention_html(user.id, user.first_name)} dilaporkan {mention_html(reported_user.id, reported_user.first_name)} ke admin!"
 
             msg = (
-                f"<b>⚠️ Laporan: </b>{html.escape(chat.title)}\n"
+                f"<b>⚠️ Group: </b>{html.escape(chat.title)}\n"
                 f"<b> • Dilaporkan oleh:</b> {mention_html(user.id, user.first_name)}(<code>{user.id}</code>)\n"
                 f"<b> • Anggota yang dilaporkan:</b> {mention_html(reported_user.id, reported_user.first_name)} (<code>{reported_user.id}</code>)\n"
             )
@@ -118,17 +118,17 @@ def report(update: Update, context: CallbackContext) -> str:
                 ],
                 [
                     InlineKeyboardButton(
-                        "⚠ Kick",
+                        "⚠ Keluarkan",
                         callback_data=f"report_{chat.id}=kick={reported_user.id}={reported_user.first_name}",
                     ),
                     InlineKeyboardButton(
-                        "⛔️ Ban",
+                        "⛔️ Blokir",
                         callback_data=f"report_{chat.id}=banned={reported_user.id}={reported_user.first_name}",
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "❎ Delete Message",
+                        "❎ Hapus Pesan",
                         callback_data=f"report_{chat.id}=delete={reported_user.id}={message.reply_to_message.message_id}",
                     )
                 ],
@@ -136,11 +136,11 @@ def report(update: Update, context: CallbackContext) -> str:
             reply_markup = InlineKeyboardMarkup(keyboard)
         else:
             reported = (
-                f"{mention_html(user.id, user.first_name)} reported "
-                f"{mention_html(reported_user.id, reported_user.first_name)} to the admins!"
+                f"{mention_html(user.id, user.first_name)} dilaporkan "
+                f"{mention_html(reported_user.id, reported_user.first_name)} ke admin!"
             )
 
-            msg = f'{mention_html(user.id, user.first_name)} is calling for admins in "{html.escape(chat_name)}"!'
+            msg = f'{mention_html(user.id, user.first_name)} memanggil admin di "{html.escape(chat_name)}"!'
             link = ""
             should_forward = True
 
@@ -197,7 +197,7 @@ def report(update: Update, context: CallbackContext) -> str:
                     LOGGER.exception("Exception while reporting user")
 
         message.reply_to_message.reply_text(
-            f"{mention_html(user.id, user.first_name)} reported the message to the admins.",
+            f"{mention_html(user.id, user.first_name)} Pesan ini dilaporkan ke admin.",
             parse_mode=ParseMode.HTML,
         )
         return msg
