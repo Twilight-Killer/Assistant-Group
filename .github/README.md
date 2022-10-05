@@ -5,10 +5,10 @@
 </h2>
 
 <p align="center">
-  <img src="https://github.com/AnonymousR1025/FallenRobot/blob/master/FallenRobot/resources/fglitch.gif">
+  <img src="https://github.com/Twilight-Killer/Assistant-Group/blob/master/Assistant-Group/resources/fglitch.gif">
 </p>
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ](https://t.me/FallenXRobot)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ](https://t.me/DarkiezZzz)**_
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
