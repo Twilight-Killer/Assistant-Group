@@ -44,7 +44,6 @@ regex
 requests
 secureme
 search_engine_parser
-speedtest-cli
 spongemock
 sqlalchemy==1.4.41
 telegram
@@ -56,5 +55,4 @@ wget
 wikipedia
 youtube_search
 youtube_search_python
-yt_dlp
 zalgo-text
