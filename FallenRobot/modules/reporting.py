@@ -83,7 +83,7 @@ def report(update: Update, context: CallbackContext) -> str:
         message = update.effective_message
 
         if not args:
-            message.reply_text("Gunakan <code>/report lalu tulis alasan</code> untuk melaporkan.")
+            message.reply_text("Gunakan /report lalu tulis alasan untuk melaporkan.")
             return ""
 
         if user.id == reported_user.id:
@@ -210,14 +210,14 @@ def __migrate__(old_chat_id, new_chat_id):
 
 
 def __chat_settings__(chat_id, _):
-    return f"This chat is setup to send user reports to admins, via /report and @admin: `{sql.chat_should_report(chat_id)}`"
+    return f"Obrolan ini diatur untuk mengirim laporan pengguna ke admin, melalui /report dan @admin: `{sql.chat_should_report(chat_id)}`"
 
 
 def __user_settings__(user_id):
     if sql.user_should_report(user_id) is True:
-        text = "You will receive reports from chats you're admin."
+        text = "Anda akan menerima laporan dari obrolan yang Anda admin."
     else:
-        text = "You will *not* receive reports from chats you're admin."
+        text = "Anda *tidak* akan menerima laporan dari obrolan yang Anda kelola."
     return text
 
 
@@ -229,7 +229,7 @@ def buttons(update: Update, context: CallbackContext):
         try:
             bot.kickChatMember(splitter[0], splitter[2])
             bot.unbanChatMember(splitter[0], splitter[2])
-            query.answer("✅ Sukses Ditendang")
+            query.answer("✅ Berhasil Ditendang")
             return ""
         except Exception as err:
             query.answer("🛑 Gagal Ditendang")
@@ -241,7 +241,7 @@ def buttons(update: Update, context: CallbackContext):
     elif splitter[1] == "banned":
         try:
             bot.kickChatMember(splitter[0], splitter[2])
-            query.answer("✅  Sukses Diblokir")
+            query.answer("✅  Berhasil Diblokir")
             return ""
         except Exception as err:
             bot.sendMessage(
