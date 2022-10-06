@@ -82,10 +82,10 @@ def check_flood(update, context) -> str:
                 until_date=mutetime,
                 permissions=ChatPermissions(can_send_messages=False),
             )
-            execstrings = "Muted for {}".format(getvalue)
+            execstrings = "`Mute selama` {}".format(getvalue)
             tag = "TMUTE"
         send_message(
-            update.effective_message, "Kamu SPAM di grup ini. sekarang\n{}!".format(execstrings)
+            update.effective_message, "`Bodoh, kamu SPAM di grup ini. sekarang`\n{}!".format(execstrings)
         )
 
         return (
@@ -299,7 +299,7 @@ def set_flood_mode(update, context):
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "This command is meant to use in group not in PM",
+                "Perintah ini hanya bisa di gunakan di grup bukan di PM",
             )
             return ""
         chat = update.effective_chat
@@ -337,7 +337,7 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
             sql.set_flood_strength(chat_id, 5, str(args[1]))
         else:
             send_message(
-                update.effective_message, "I only understand ban/kick/mute/tban/tmute!"
+                update.effective_message, "Saya hanya mengerti ban/kick/mute/tban/tmute!"
             )
             return
         if conn:
