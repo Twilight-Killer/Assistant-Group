@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/FallenRobot
-RUN git clone https://github.com/AnonymousR1025/FallenRobot /root/FallenRobot
+# Copy Python Requirements to /root/Assistant-Group
+RUN git clone https://github.com/Twilight-Killer/Assistant-Group /root/Assistant-Group
 WORKDIR /root/FallenRobot
 
-#Copy config file to /root/FallenRobot/FallenRobot
-COPY ./FallenRobot/config.py ./FallenRobot/config.py* /root/FallenRobot/FallenRobot/
+#Copy config file to /root/Assistant-Group/Assistant-Group
+COPY ./Assistant-Group/config.py ./Assistant-Group/config.py* /root/Assistant-Group/Assistant-Group/
 
 ENV PATH="/home/bot/bin:$PATH"
 
