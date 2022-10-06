@@ -133,11 +133,11 @@ def warn(
 
         reply = (
             f"⚠️ Peringatan ⚠️\n"
-            f"•Anggota: {mention_html(user.id, user.first_name)}\n"
-            f"•Batas: {num_warns}/{limit}"
+            f"• Anggota: {mention_html(user.id, user.first_name)}\n"
+            f"• Batas: {num_warns}/{limit}"
         )
         if reason:
-            reply += f"\n<code> </code><b>•Alasan:</b> {html.escape(reason)}"
+            reply += f"\n<code></code><b>•Alasan:</b> {html.escape(reason)}"
 
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
