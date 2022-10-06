@@ -93,16 +93,16 @@ def warn(
             chat.unban_member(user.id)
             reply = (
                 f"<code>❕</code><b>Punch Event</b>\n"
-                f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<code> </code><b>•  Count:</b> {limit}"
+                f"<code> </code><b>•  Anggota:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<code> </code><b>•  Batas:</b> {limit}"
             )
 
         else:  # ban
             chat.kick_member(user.id)
             reply = (
-                f"<code>❕</code><b>Ban Event</b>\n"
-                f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<code> </code><b>•  Count:</b> {limit}"
+                f"<code>❗️</code><u>Blokir</u>\n"
+                f"<code> </code><code>•  Anggota:</code> {mention_html(user.id, user.first_name)}\n"
+                f"<code> </code><code>•  Batas:</code> {limit}"
             )
 
         for warn_reason in reasons:
@@ -114,9 +114,9 @@ def warn(
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#WARN_BAN\n"
             f"<b>Admin:</b> {warner_tag}\n"
-            f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>Reason:</b> {reason}\n"
-            f"<b>Counts:</b> <code>{num_warns}/{limit}</code>"
+            f"<b>Anggota:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>Alasan:</b> {reason}\n"
+            f"<b>Batas:</b> <code>{num_warns}/{limit}</code>"
         )
 
     else:
@@ -124,7 +124,7 @@ def warn(
             [
                 [
                     InlineKeyboardButton(
-                        "✨ ʀᴇᴍᴏᴠᴇ ✨",
+                        "⚠️ Hapus ⚠️",
                         callback_data="rm_warn({})".format(user.id),
                     ),
                 ],
@@ -132,20 +132,20 @@ def warn(
         )
 
         reply = (
-            f"<code>❕</code><b>Warn Event</b>\n"
-            f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<code> </code><b>•  Count:</b> {num_warns}/{limit}"
+            f"<code>❗️</code><u>Peringatan</u>\n"
+            f"<code> </code><code>•  Anggota:</code> {mention_html(user.id, user.first_name)}\n"
+            f"<code> </code><code>•  Batas:</code> {num_warns}/{limit}"
         )
         if reason:
-            reply += f"\n<code> </code><b>•  Reason:</b> {html.escape(reason)}"
+            reply += f"\n<code> </code><b>•  Alasan:</b> {html.escape(reason)}"
 
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#WARN\n"
             f"<b>Admin:</b> {warner_tag}\n"
-            f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>Reason:</b> {reason}\n"
-            f"<b>Counts:</b> <code>{num_warns}/{limit}</code>"
+            f"<b>Anggota:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>Alasan:</b> {reason}\n"
+            f"<b>Batas:</b> <code>{num_warns}/{limit}</code>"
         )
 
     try:
@@ -178,7 +178,7 @@ def button(update: Update, context: CallbackContext) -> str:
         res = sql.remove_warn(user_id, chat.id)
         if res:
             update.effective_message.edit_text(
-                "Warn removed by {}.".format(mention_html(user.id, user.first_name)),
+                "Peringatan dihapus admin {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
             user_member = chat.get_member(user_id)
@@ -186,7 +186,7 @@ def button(update: Update, context: CallbackContext) -> str:
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#UNWARN\n"
                 f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+                f"<b>Anggota:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
             )
         else:
             update.effective_message.edit_text(
@@ -249,7 +249,7 @@ def reset_warns(update: Update, context: CallbackContext) -> str:
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#RESETWARNS\n"
             f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>User:</b> {mention_html(warned.id, warned.first_name)}"
+            f"<b>Anggota:</b> {mention_html(warned.id, warned.first_name)}"
         )
     else:
         message.reply_text("No user has been designated!")
