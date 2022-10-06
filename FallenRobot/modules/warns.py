@@ -132,7 +132,7 @@ def warn(
         )
 
         reply = (
-            f"⛔️ Peringatan ⛔️\n"
+            f"⛔️ PERINGATAN ⛔️\n"
             f"• Anggota: {mention_html(user.id, user.first_name)}\n"
             f"• Batas: {num_warns}/{limit}"
         )
