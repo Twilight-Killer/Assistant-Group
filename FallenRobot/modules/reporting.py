@@ -83,7 +83,7 @@ def report(update: Update, context: CallbackContext) -> str:
         message = update.effective_message
 
         if not args:
-            message.reply_text("Gunakan `/report lalu tulis alasan` untuk melaporkan.")
+            message.reply_text("Gunakan <code>/report lalu tulis alasan</code> untuk melaporkan.")
             return ""
 
         if user.id == reported_user.id:
@@ -107,12 +107,12 @@ def report(update: Update, context: CallbackContext) -> str:
                 f"<b> • Dilaporkan oleh:</b> {mention_html(user.id, user.first_name)}(<code>{user.id}</code>)\n"
                 f"<b> • Anggota yang dilaporkan:</b> {mention_html(reported_user.id, reported_user.first_name)} (<code>{reported_user.id}</code>)\n"
             )
-            link = f'<b> • Pesan yang dilaporkan:</b> <a href="https://t.me/{chat.username}/{message.reply_to_message.message_id}">click here</a>'
+            link = f'<b> • Pesan yang dilaporkan:</b> <a href="https://t.me/{chat.username}/{message.reply_to_message.message_id}">Klik disini</a>'
             should_forward = False
             keyboard = [
                 [
                     InlineKeyboardButton(
-                        "➡ Message",
+                        "➡ Pesan",
                         url=f"https://t.me/{chat.username}/{message.reply_to_message.message_id}",
                     )
                 ],
