@@ -33,12 +33,12 @@ def report_setting(update: Update, context: CallbackContext):
             if args[0] in ("yes", "on"):
                 sql.set_user_setting(chat.id, True)
                 msg.reply_text(
-                    "Turned on reporting! You'll be notified whenever anyone reports something."
+                    "Aktifkan pelaporan!  Anda akan diberi tahu setiap kali ada yang melaporkan sesuatu."
                 )
 
             elif args[0] in ("no", "off"):
                 sql.set_user_setting(chat.id, False)
-                msg.reply_text("Turned off reporting! You wont get any reports.")
+                msg.reply_text("Nonaktifkan pelaporan!  Anda tidak akan mendapatkan laporan apa pun.")
         else:
             msg.reply_text(
                 f"Your current report preference is: `{sql.user_should_report(chat.id)}`",
@@ -57,7 +57,7 @@ def report_setting(update: Update, context: CallbackContext):
             elif args[0] in ("no", "off"):
                 sql.set_chat_setting(chat.id, False)
                 msg.reply_text(
-                    "Turned off reporting! No admins will be notified on /report or @admin."
+                    "Nonaktifkan pelaporan!  Admin tidak akan diberi tahu di /report atau @admin."
                 )
         else:
             msg.reply_text(
@@ -83,7 +83,7 @@ def report(update: Update, context: CallbackContext) -> str:
         message = update.effective_message
 
         if not args:
-            message.reply_text("Gunakan /report untuk melaporkan.")
+            message.reply_text("Gunakan `/report lalu tulis alasan` untuk melaporkan.")
             return ""
 
         if user.id == reported_user.id:
