@@ -1,7 +1,7 @@
 ━━━━━━━━━━━━━━━━━━━━
 
 <h2 align="center">
-    ──「 ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ 」──
+    ──「 HAOTOGEL OFFICIAL 」──
 </h2>
 
 <p align="center">
@@ -12,20 +12,20 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ 
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-<a href="https://github.com/AnonymousR1025/FallenRobot/stargazers"><img src="https://img.shields.io/github/stars/AnonymousR1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/AnonymousR1025/FallenRobot/network/members"> <img src="https://img.shields.io/github/forks/AnonymousR1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/AnonymousR1025/FallenRobot/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/Twilight-Killer/Assistant-Group/stargazers"><img src="https://img.shields.io/github/stars/Twilight-Killer/Assistant-Group?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/Twilight-Killer/Assistant-Group/network/members"> <img src="https://img.shields.io/github/forks/Twilight-Killer/Assistant-Group?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/Twilight-Killer/Assistant-Group/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-skyblue?style=for-the-badge&logo=python" alt="Python" /> </a>
 <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=white&label=telethon&logo=python&logoColor=blue&style=for-the-badge" /></a>
 <a href="https://pypi.org/project/Pyrogram/"> <img src="https://img.shields.io/pypi/v/pyrogram?color=white&label=pyrogram&logo=python&logoColor=blue&style=for-the-badge" /></a>
-<a href="https://github.com/AnonymousR1025/FallenRobot"> <img src="https://img.shields.io/github/repo-size/AnonymousR1025/FallenRobot?color=skyblue&logo=github&logoColor=blue&style=for-the-badge" /></a>
-<a href="https://github.com/AnonymousR1025/FallenRobot/commits/AnonymousR1025"> <img src="https://img.shields.io/github/last-commit/AnonymousR1025/FallenRobot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/Twilight-Killer/Assistant-Group"> <img src="https://img.shields.io/github/repo-size/Twilight-Killer/Assistant-Group?color=skyblue&logo=github&logoColor=blue&style=for-the-badge" /></a>
+<a href="https://github.com/Twilight-Killer/Assistant-Group/commits/Twilight-Killer"> <img src="https://img.shields.io/github/last-commit/Twilight-Killer/Assistan-Group?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://telegra.ph/file/7bd111132fce009e4605e.jpg">
+  <img src="https://telegra.ph/file/a9ef3a497673c2f812c08.jpg">
 </p>
 
 <p align="center">
@@ -45,10 +45,10 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ 
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/DevilsHeavenMF"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/HaotogelLivedraw"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
-<a href="https://telegram.me/FallenXBots"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/HaotogelOfficialLivedraw"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
@@ -57,7 +57,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ 
     ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
-- <b>[ᴀɴᴏɴʏᴍᴏᴜs](https://github.com/AnonymousR1025)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/AnonymousR1025/FallenRobot) </b>
+- <b>[ᴀɴᴏɴʏᴍᴏᴜs](https://github.com/Twilight-Killer)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/Twilight-Killer/Assistant-Group) </b>
 - <b>[ᴩᴀᴜʟ ʟᴀʀsᴇɴ](https://github.com/PaulSonOfLars)  ➻  [ᴛɢ ʙᴏᴛ](https://github.com/PaulSonOfLars/tgbot) </b>
 - <b>[ᴀɴɪᴍᴇ ᴋᴀɪᴢᴏᴋᴜ](https://github.com/AnimeKaizoku)  ➻  [sᴀɪᴛᴀᴍᴀ ʀᴏʙᴏᴛ](https://github.com/AnimeKaizoku/SaitamaRobot) </b>
 - <b>[ʜᴀᴍᴋᴇʀ ᴄᴀᴛ](https://github.com/TheHamkerCat)  ➻  [ᴡɪʟʟɪᴀᴍ ʙᴜᴛᴄʜᴇʀ](https://github.com/TheHamkerCat/WilliamButcherBot) </b>
