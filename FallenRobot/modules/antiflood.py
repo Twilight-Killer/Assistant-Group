@@ -82,10 +82,10 @@ def check_flood(update, context) -> str:
                 until_date=mutetime,
                 permissions=ChatPermissions(can_send_messages=False),
             )
-            execstrings = "Mute selama {}".format(getvalue)
+            execstrings = "di mute selama {}".format(getvalue)
             tag = "TMUTE"
         send_message(
-            update.effective_message, "Bosku SPAM di grup. Sekarang\n{}!".format(execstrings)
+            update.effective_message, "Terlalu banyak pesan dikirim. Kamu\n{}.".format(execstrings)
         )
 
         return (
