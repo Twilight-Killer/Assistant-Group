@@ -56,3 +56,5 @@ wikipedia
 youtube_search
 youtube_search_python
 zalgo-text
+speedtest-cli
+yt_dlp
