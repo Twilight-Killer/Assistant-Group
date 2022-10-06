@@ -132,9 +132,9 @@ def warn(
         )
 
         reply = (
-            f"<code> </code><u>⚠️ Peringatan ⚠️</u>\n"
-            f"<code> </code><code>•Anggota:</code> {mention_html(user.id, user.first_name)}\n"
-            f"<code> </code><code>•Batas:</code> {num_warns}/{limit}"
+            f"⚠️ Peringatan ⚠️\n"
+            f"•Anggota: {mention_html(user.id, user.first_name)}\n"
+            f"•Batas: {num_warns}/{limit}"
         )
         if reason:
             reply += f"\n<code> </code><b>•Alasan:</b> {html.escape(reason)}"
