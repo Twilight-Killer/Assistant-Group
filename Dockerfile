@@ -66,7 +66,7 @@ RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/Assistant-Group
 RUN git clone https://github.com/Twilight-Killer/Assistant-Group /root/Assistant-Group
-WORKDIR /root/FallenRobot
+WORKDIR /root/Assistant-Group
 
 #Copy config file to /root/Assistant-Group/Assistant-Group
 COPY ./Assistant-Group/config.py ./Assistant-Group/config.py* /root/Assistant-Group/Assistant-Group/
