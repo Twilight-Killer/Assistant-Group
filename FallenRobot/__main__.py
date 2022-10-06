@@ -81,13 +81,13 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hai* {}, 🔥
+Hai {} 🔥
 
-*๏ Saya* {} !
+๏ Saya {} !
 ➻ Bot ini khusus dibuat untuk mengelolah grup.
 
 ──────────────────
-*๏ Klik tombol dibawah untuk mengetahui dan perintah bot ini.*
+๏ Klik tombol dibawah untuk mengetahui dan perintah bot ini.
 """
 
 buttons = [
@@ -363,13 +363,13 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     if query.data == "fallen_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*Hai*🔥\n *Saya {BOT_NAME}*"
-            "\n*Bot powerfull yang dibuat khusus untuk mengelolah grup.*"
-            "\n*Hubungi owner untuk menggunakan bot ini.*"
+            text=f"Hai 🔥\nSaya {BOT_NAME}"
+            "\nBot powerfull yang dibuat khusus untuk mengelolah grup."
+            "\nHubungi owner untuk menggunakan bot ini."
             "\n\n────────────────────"
-            f"\n*➻ ᴜᴩᴛɪᴍᴇ »* {uptime}"
-            f"\n*➻ ᴜsᴇʀs »* {sql.num_users()}"
-            f"\n*➻ ᴄʜᴀᴛs »* {sql.num_chats()}"
+            f"\n➻ ᴜᴩᴛɪᴍᴇ » {uptime}"
+            f"\n➻ ᴜsᴇʀs » {sql.num_users()}"
+            f"\n➻ ᴄʜᴀᴛs » {sql.num_chats()}"
             "\n────────────────────"
             "\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
             "\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
@@ -451,9 +451,9 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-*ʜᴇʏ,
- ᴛʜɪs ɪs {BOT_NAME},
-ᴀɴ ᴏᴩᴇɴ sᴏᴜʀᴄᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.*
+*Hay,
+Saya {BOT_NAME},
+Bot ini khusus untuk mengelolah grup.*
 
 ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴛᴇʟᴇᴛʜᴏɴ](https://github.com/LonamiWebs/Telethon)
 [ᴩʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)
