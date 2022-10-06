@@ -24,14 +24,14 @@ from FallenRobot.modules.log_channel import loggable
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     if not user_id:
-        reply = "You don't seem to be referring to a user or the ID specified is incorrect.."
+        reply = "Balas pesan anggota tersebut atau gunakan ID/Username nya!."
         return reply
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message == "User not found":
-            reply = "I can't seem to find this user"
+        if excp.message == "Anggota tidak ditemukan":
+            reply = "Sepertinya saya tidak dapat menemukan anggota ini"
             return reply
         else:
             raise
@@ -84,13 +84,13 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"Muted <b>{html.escape(member.user.first_name)}</b> with no expiration date!",
+            f"<b>{html.escape(member.user.first_name)}</b>, telah di mute!",
             parse_mode=ParseMode.HTML,
         )
         return log
 
     else:
-        message.reply_text("This user is already muted!")
+        message.reply_text("Anggota ini sudah mute!")
 
     return ""
 
@@ -122,7 +122,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             and member.can_send_other_messages
             and member.can_add_web_page_previews
         ):
-            message.reply_text("This user already has the right to speak.")
+            message.reply_text("Anggota ini sudah memiliki hak untuk berbicara.")
         else:
             chat_permissions = ChatPermissions(
                 can_send_messages=True,
@@ -140,7 +140,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
+                f"<b>{html.escape(member.user.first_name)}</b> sekarang sudah tidak mute!",
                 parse_mode=ParseMode.HTML,
             )
             return (
@@ -151,8 +151,8 @@ def unmute(update: Update, context: CallbackContext) -> str:
             )
     else:
         message.reply_text(
-            "This user isn't even in the chat, unmuting them won't make them talk more than they "
-            "already do!"
+            "Anggota ini bahkan tidak ada dalam obrolan, mengaktifkan mereka tidak akan membuat mereka berbicara lebih dari mereka "
+            "sudah melakukan!"
         )
 
     return ""
