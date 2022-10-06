@@ -270,13 +270,13 @@ def flood(update, context):
     else:
         if conn:
             text = msg.reply_text(
-                "I'm currently restricting members after {} consecutive messages in {}.".format(
+                "Saat ini saya membatasi anggota setelah {} pesan berturut-turut di {}.".format(
                     limit, chat_name
                 )
             )
         else:
             text = msg.reply_text(
-                "I'm currently restricting members after {} consecutive messages.".format(
+                "Saat ini saya membatasi anggota setelah {} pesan berturut-turut.".format(
                     limit
                 )
             )
