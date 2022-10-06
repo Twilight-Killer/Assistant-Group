@@ -40,7 +40,7 @@ def blacklist(update, context):
         chat_id = update.effective_chat.id
         chat_name = chat.title
 
-    filter_list = "Current blacklisted words in <b>{}</b>:\n".format(chat_name)
+    filter_list = "Kata-kata yang masuk daftar hitam saat ini di <b>{}</b>:\n".format(chat_name)
 
     all_blacklisted = sql.get_chat_blacklist(chat_id)
 
@@ -56,7 +56,7 @@ def blacklist(update, context):
 
     split_text = split_message(filter_list)
     for text in split_text:
-        if filter_list == "Current blacklisted words in <b>{}</b>:\n".format(
+        if filter_list == "Kata-kata yang masuk daftar hitam saat ini di <b>{}</b>:\n".format(
             html.escape(chat_name)
         ):
             send_message(
@@ -99,7 +99,7 @@ def add_blacklist(update, context):
         if len(to_blacklist) == 1:
             send_message(
                 update.effective_message,
-                "Added blacklist <code>{}</code> in chat: <b>{}</b>!".format(
+                "Blacklist ditambahkan  <code>{}</code> dalam obrolan: <b>{}</b>!".format(
                     html.escape(to_blacklist[0]), html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -108,7 +108,7 @@ def add_blacklist(update, context):
         else:
             send_message(
                 update.effective_message,
-                "Added blacklist trigger: <code>{}</code> in <b>{}</b>!".format(
+                "Blacklist ditambahkan trigger: <code>{}</code> dalam <b>{}</b>!".format(
                     len(to_blacklist), html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -117,7 +117,7 @@ def add_blacklist(update, context):
     else:
         send_message(
             update.effective_message,
-            "Tell me which words you would like to add in blacklist.",
+            "Beri tahu saya kata-kata mana yang ingin Anda tambahkan di blacklist.",
         )
 
 
@@ -156,21 +156,21 @@ def unblacklist(update, context):
             if successful:
                 send_message(
                     update.effective_message,
-                    "Removed <code>{}</code> from blacklist in <b>{}</b>!".format(
+                    "Dihapus <code>{}</code> from blacklist dalam <b>{}</b>!".format(
                         html.escape(to_unblacklist[0]), html.escape(chat_name)
                     ),
                     parse_mode=ParseMode.HTML,
                 )
             else:
                 send_message(
-                    update.effective_message, "This is not a blacklist trigger!"
+                    update.effective_message, "Ini bukan pemicu blacklist!"
                 )
 
         elif successful == len(to_unblacklist):
             send_message(
                 update.effective_message,
-                "Removed <code>{}</code> from blacklist in <b>{}</b>!".format(
-                    successful, html.escape(chat_name)
+                "Dihapus <code>{}</code> dari blacklist di <b>{}</b>!".format(
+                    berhasil, html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
             )
@@ -185,9 +185,9 @@ def unblacklist(update, context):
         else:
             send_message(
                 update.effective_message,
-                "Removed <code>{}</code> from blacklist. {} did not exist, "
-                "so were not removed.".format(
-                    successful, len(to_unblacklist) - successful
+                "Dihapus <code>{}</code> dari blacklist. {} Tidak ada, "
+                "jadi tidak dihapus.".format(
+                    berhasil, len(to_unblacklist) - berhasil
                 ),
                 parse_mode=ParseMode.HTML,
             )
