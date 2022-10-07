@@ -73,11 +73,11 @@ def mute(update: Update, context: CallbackContext) -> str:
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#MUTE\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}"
+        f"<b>Anggota:</b> {mention_html(member.user.id, member.user.first_name)}"
     )
 
     if reason:
-        log += f"\n<b>Reason:</b> {reason}"
+        log += f"\n<b>Alasan:</b> {reason}"
 
     if member.can_send_messages is None or member.can_send_messages:
         chat_permissions = ChatPermissions(can_send_messages=False)
@@ -90,7 +90,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         return log
 
     else:
-        message.reply_text("Anggota ini sudah mute!")
+        message.reply_text("Anggota ini sudah di mute!")
 
     return ""
 
@@ -122,7 +122,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             and member.can_send_other_messages
             and member.can_add_web_page_previews
         ):
-            message.reply_text("Anggota ini sudah memiliki hak untuk berbicara.")
+            message.reply_text("Anggota ini sudah bisa untuk berbicara.")
         else:
             chat_permissions = ChatPermissions(
                 can_send_messages=True,
@@ -140,14 +140,14 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"<b>{html.escape(member.user.first_name)}</b> sekarang sudah tidak mute!",
+                f"<b>{html.escape(member.user.first_name)}</b> sekarang sudah tidak di mute!",
                 parse_mode=ParseMode.HTML,
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#UNMUTE\n"
                 f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}"
+                f"<b>Anggota:</b> {mention_html(member.user.id, member.user.first_name)}"
             )
     else:
         message.reply_text(
@@ -200,11 +200,11 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#TEMP MUTED\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}\n"
-        f"<b>Time:</b> {time_val}"
+        f"<b>Anggota:</b> {mention_html(member.user.id, member.user.first_name)}\n"
+        f"<b>Waktu:</b> {time_val}"
     )
     if reason:
-        log += f"\n<b>Reason:</b> {reason}"
+        log += f"\n<b>Alasan:</b> {reason}"
 
     try:
         if member.can_send_messages is None or member.can_send_messages:
@@ -214,7 +214,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
             )
             bot.sendMessage(
                 chat.id,
-                f"Muted <b>{html.escape(member.user.first_name)}</b> for {time_val}!",
+                f"Mute <b>{html.escape(member.user.first_name)}</b> untuk {time_val}!",
                 parse_mode=ParseMode.HTML,
             )
             return log
@@ -224,7 +224,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text(f"Muted for {time_val}!", quote=False)
+            message.reply_text(f"Mute untuk {time_val}!", quote=False)
             return log
         else:
             LOGGER.warning(update)
