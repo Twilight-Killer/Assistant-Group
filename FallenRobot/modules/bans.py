@@ -64,7 +64,7 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Dia adalah Dewa saya, Kamu tidak dapat memblokirnya")
+            message.reply_text("Dia adalah Pencipta Saya, Kamu tidak dapat memblokirnya")
         elif user_id in DEV_USERS:
             message.reply_text("Saya tidak bisa bertindak melawan diri kita sendiri.")
         elif user_id in DRAGONS:
@@ -110,9 +110,9 @@ def ban(update: Update, context: CallbackContext) -> str:
 
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
-            f"<code>❕</code><b>ʙᴀɴ ᴇᴠᴇɴᴛ</b>\n"
-            f"<code> </code><b>•  ʙᴀɴɴᴇᴅ ʙʏ:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<code> </code><b>•  ᴜsᴇʀ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+            f"<code>⛔️</code><b>ʙᴀɴ ᴇᴠᴇɴᴛ</b>\n"
+            f"<code> </code><code>•  Diblokir oleh:</code> {mention_html(user.id, user.first_name)}\n"
+            f"<code> </code><code>•  Anggota:</code> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
             reply += f"\n<code> </code><b>•  ʀᴇᴀsᴏɴ:</b> \n{html.escape(reason)}"
@@ -269,7 +269,7 @@ def kick(update: Update, context: CallbackContext) -> str:
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         bot.sendMessage(
             chat.id,
-            f"One Kicked! {mention_html(member.user.id, html.escape(member.user.first_name))}.",
+            f"{mention_html(member.user.id, html.escape(member.user.first_name))} berhasil dikeluarkan!",
             parse_mode=ParseMode.HTML,
         )
         log = (
@@ -340,7 +340,7 @@ def unban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     chat.unban_member(user_id)
-    message.reply_text("Yep, this user can join!")
+    message.reply_text("Yep, anggota ini sekarang sudah bisa untuk bergabung lagi!")
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
