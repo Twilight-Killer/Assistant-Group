@@ -72,7 +72,7 @@ def list_handlers(update, context):
 
     if not all_handlers:
         send_message(
-            update.effective_message, "No filters saved in {}!".format(chat_name)
+            update.effective_message, "Tidak ada filter yang disimpan di {}!".format(chat_name)
         )
         return
 
@@ -120,7 +120,7 @@ def filters(update, context):
     if not msg.reply_to_message and len(args) < 2:
         send_message(
             update.effective_message,
-            "Please provide keyboard keyword for this filter to reply with!",
+            "Harap berikan kata kunci keyboard untuk filter ini membalas!!",
         )
         return
 
@@ -128,7 +128,7 @@ def filters(update, context):
         if len(args) < 2:
             send_message(
                 update.effective_message,
-                "Please provide keyword for this filter to reply with!",
+                "Harap berikan kata kunci keyboard untuk filter ini membalas!!",
             )
             return
         else:
@@ -158,7 +158,7 @@ def filters(update, context):
         if not text:
             send_message(
                 update.effective_message,
-                "There is no note message - You can't JUST have buttons, you need a message to go with it!",
+                "Tidak ada pesan catatan - Anda tidak bisa HANYA memiliki tombol, Anda perlu pesan untuk menggunakannya!",
             )
             return
 
@@ -180,7 +180,7 @@ def filters(update, context):
     elif not text and not file_type:
         send_message(
             update.effective_message,
-            "Please provide keyword for this filter reply with!",
+            "Harap berikan kata kunci keyboard untuk filter ini membalas!",
         )
         return
 
@@ -201,12 +201,12 @@ def filters(update, context):
         if (msg.reply_to_message.text or msg.reply_to_message.caption) and not text:
             send_message(
                 update.effective_message,
-                "There is no note message - You can't JUST have buttons, you need a message to go with it!",
+                "Tidak ada pesan catatan - Anda tidak bisa HANYA memiliki tombol, Anda perlu pesan untuk menggunakannya!",
             )
             return
 
     else:
-        send_message(update.effective_message, "Invalid filter!")
+        send_message(update.effective_message, "Filter tidak valid!")
         return
 
     add = addnew_filter(update, chat_id, keyword, text, file_type, file_id, buttons)
@@ -242,13 +242,13 @@ def stop_filter(update, context):
             chat_name = chat.title
 
     if len(args) < 2:
-        send_message(update.effective_message, "What should i stop?")
+        send_message(update.effective_message, "Apa yang harus saya stop?")
         return
 
     chat_filters = sql.get_chat_triggers(chat_id)
 
     if not chat_filters:
-        send_message(update.effective_message, "No filters active here!")
+        send_message(update.effective_message, "Tidak ada filter aktif disini!")
         return
 
     for keyword in chat_filters:
@@ -263,7 +263,7 @@ def stop_filter(update, context):
 
     send_message(
         update.effective_message,
-        "That's not a filter - Click: /filters to get currently active filters.",
+        "Itu bukan filter - Klik: /filters untuk melihat filter yang sedang aktif.",
     )
 
 
@@ -417,7 +417,7 @@ def reply_filter(update, context):
                     except BadRequest:
                         send_message(
                             message,
-                            "I don't have the permission to send the content of the filter.",
+                            "Saya tidak memiliki izin untuk mengirim konten filter.",
                         )
                 break
             else:
@@ -531,7 +531,7 @@ def rmall_callback(update, context):
         if member.status == "creator" or query.from_user.id in DRAGONS:
             allfilters = sql.get_chat_triggers(chat.id)
             if not allfilters:
-                msg.edit_text("No filters in this chat, nothing to stop!")
+                msg.edit_text("Tidak ada filter dalam obrolan ini, tidak ada yang stop!")
                 return
 
             count = 0
