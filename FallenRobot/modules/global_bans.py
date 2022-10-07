@@ -175,18 +175,18 @@ def gban(update: Update, context: CallbackContext):
 
     log_message = (
         f"#GBANNED\n"
-        f"<b>Originated from:</b> <code>{chat_origin}</code>\n"
+        f"<b>Berasal dari:</b> <code>{chat_origin}</code>\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>Banned User:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
-        f"<b>Banned User ID:</b> <code>{user_chat.id}</code>\n"
+        f"<b>GBanned Anggota:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
+        f"<b>GBanned ID Anggota:</b> <code>{user_chat.id}</code>\n"
         f"<b>Event Stamp:</b> <code>{current_time}</code>"
     )
 
     if reason:
         if chat.type == chat.SUPERGROUP and chat.username:
-            log_message += f'\n<b>Reason:</b> <a href="https://telegram.me/{chat.username}/{message.message_id}">{reason}</a>'
+            log_message += f'\n<b>Alasan:</b> <a href="https://telegram.me/{chat.username}/{message.message_id}">{reason}</a>'
         else:
-            log_message += f"\n<b>Reason:</b> <code>{reason}</code>"
+            log_message += f"\n<b>Alasan:</b> <code>{reason}</code>"
 
     if EVENT_LOGS:
         try:
