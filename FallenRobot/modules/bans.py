@@ -111,11 +111,11 @@ def ban(update: Update, context: CallbackContext) -> str:
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
             f"<code></code><b>⚠️ BLOKIR</b>\n"
-            f"<code></code><code>•Diblokir:</code> {mention_html(user.id, user.first_name)}\n"
-            f"<code></code><code>•Anggota:</code> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+            f"<code></code><code>• Diblokir:</code> {mention_html(user.id, user.first_name)}\n"
+            f"<code></code><code>• Anggota:</code> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
-            reply += f"\n<code></code><code>•Alasan:</code> \n{html.escape(reason)}"
+            reply += f"\n<code><• Alasan:</code>\n{html.escape(reason)}"
         bot.sendMessage(chat.id, reply, parse_mode=ParseMode.HTML, quote=False)
         return log
 
