@@ -90,7 +90,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         return log
 
     else:
-        message.reply_text("Anggota ini sudah di mute!")
+        message.reply_text("Anggota ini sudah di mute sebelumnya.")
 
     return ""
 
