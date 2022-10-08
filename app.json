@@ -1,7 +1,7 @@
 {
-      "name": "Assistant-Groul",
+      "name": "Assistant-Group",
       "description": "Telegram Group Management Bot.",
-      "logo": "https://telegra.ph/file/72e135da30a1a349f2844.jpg",
+      "logo": "https://te.legra.ph/file/94bcd8ae3749d1b9be813.jpg",
       "keywords": [
          "telegram",
          "sexy",
@@ -10,7 +10,7 @@
          "Fallen"
       ],   
    "repository": "https://github.com/Twilight-Killer/Assistant-Group",
-   "stack": "heroku-20",
+   "stack": "heroku-22",
    "addons": [
       {
          "options": {
@@ -43,7 +43,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "1356469075"
+         "value": "1128130156"
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -55,17 +55,17 @@
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "anonymous_was_bot"
+         "value": "DarkiezZzz"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Fallen Support than consider you made an enemy.",
          "required": true,
-         "value": "DevilsHeavenMF"
+         "value": "HaoTogelLivedraw"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
          "required": true,
-         "value": ""
+         "value": "mongodb+srv://Moon-Knight:Twilight-Killer@moon-knight.3jplvnv.mongodb.net/?retryWrites=true&w=majority"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -90,7 +90,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Fallen Support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "1356469075"
+         "value": "1128130156"
       },
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
@@ -142,7 +142,7 @@
       "DONATION_LINK": {
          "description": "Link where you would like to receive donations. If you are a noob, better leave it linking to Anonymous",
          "required": false,
-         "value": "https://t.me/anonymous_was_bot"
+         "value": "https://t.me/DarkiezZzz"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
@@ -151,7 +151,7 @@
       "START_IMG": {
       "description": "Telegraph link of the image which will be shown at start command.",
          "required": true,
-         "value": ""
+         "value": "https://te.legra.ph/file/94bcd8ae3749d1b9be813.jpg"
    }
    }
 }
