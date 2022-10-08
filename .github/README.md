@@ -25,7 +25,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ 
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://telegra.ph/file/a9ef3a497673c2f812c08.jpg">
+  <img src="https://te.legra.ph/file/94bcd8ae3749d1b9be813.jpg">
 </p>
 
 <p align="center">
