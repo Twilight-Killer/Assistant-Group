@@ -140,7 +140,7 @@ def sudo_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "Kamu bukan admin!"
             )
 
     return is_sudo_plus_func
@@ -201,7 +201,7 @@ def user_admin(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Who dis non-admin telling me what to do? You want a punch?"
+                "Kamu bukan admin!"
             )
 
     return is_admin
@@ -253,9 +253,9 @@ def bot_admin(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            not_admin = "I'm not admin! - REEEEEE"
+            not_admin = "Saya Bukan Admin!"
         else:
-            not_admin = f"I'm not admin in <b>{update_chat_title}</b>! - REEEEEE"
+            not_admin = f"Saya bukan admin di <b>{update_chat_title}</b>!"
 
         if is_bot_admin(chat, bot.id):
             return func(update, context, *args, **kwargs)
