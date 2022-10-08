@@ -47,7 +47,7 @@ def leave(update: Update, context: CallbackContext):
         with suppress(Unauthorized):
             update.effective_message.reply_text("Sorry, Saya keluar grup. Hubungi Owner Saya jika ingin menggunakan.")
     else:
-        update.effective_message.reply_text("Send a valid chat ID")
+        update.effective_message.reply_text("Kirim ID chat yang valid")
 
 
 @run_async
@@ -64,7 +64,7 @@ def gitpull(update: Update, context: CallbackContext):
         sent_msg.edit_text(sent_msg_text + str(i + 1))
         sleep(1)
 
-    sent_msg.edit_text("Restarted.")
+    sent_msg.edit_text("Mulai ulang.")
 
     os.system("restart.bat")
     os.execv("start.bat", sys.argv)
