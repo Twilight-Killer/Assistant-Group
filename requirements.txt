@@ -22,7 +22,6 @@ hachoir
 heroku3
 html2text
 jikanpy
-lxml
 markdown2
 motor
 nltk
@@ -50,6 +49,7 @@ telegram
 telegraph
 telethon==1.25.2
 TgCrypto
+TruthDarePy
 ujson
 wget
 wikipedia
