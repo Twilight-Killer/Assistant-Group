@@ -8,7 +8,7 @@
   <img src="https://github.com/Twilight-Killer/Assistant-Group/blob/master/Assistant-Group/resources/fglitch.gif">
 </p>
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ](https://t.me/DarkiezZzz)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [DarkiezZzz](https://t.me/DarkiezZzz)**_
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
@@ -62,6 +62,6 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ 
 - <b>[ᴀɴɪᴍᴇ ᴋᴀɪᴢᴏᴋᴜ](https://github.com/AnimeKaizoku)  ➻  [sᴀɪᴛᴀᴍᴀ ʀᴏʙᴏᴛ](https://github.com/AnimeKaizoku/SaitamaRobot) </b>
 - <b>[ʜᴀᴍᴋᴇʀ ᴄᴀᴛ](https://github.com/TheHamkerCat)  ➻  [ᴡɪʟʟɪᴀᴍ ʙᴜᴛᴄʜᴇʀ](https://github.com/TheHamkerCat/WilliamButcherBot) </b>
  
-<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/Twilight-Killer/Assistant-Group/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ 🖤 </b>
+<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/Twilight-Killer/Assistant-Group/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ HAOTOGEL OFFICIAL ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ ❤️ </b>
 
 ━━━━━━━━━━━━━━━━━━━━
