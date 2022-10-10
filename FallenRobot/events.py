@@ -22,7 +22,7 @@ def register(**args):
     if pattern is not None and not pattern.startswith("(?i)"):
         args["pattern"] = "(?i)" + pattern
 
-    args["pattern"] = pattern.replace("#,", r_pattern, 1)
+    args["pattern"] = pattern.replace("^/", r_pattern, 1)
 
     def decorator(func):
         telethn.add_event_handler(func, events.NewMessage(**args))
