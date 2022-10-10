@@ -54,7 +54,7 @@ def leave(update: Update, context: CallbackContext):
 @dev_plus
 def gitpull(update: Update, context: CallbackContext):
     sent_msg = update.effective_message.reply_text(
-        "Menarik semua perubahan dari jarak jauh dan kemudian memulai ulang."
+        "Menarik semua perubahan dari jarak jauh dan memulai ulang."
     )
     subprocess.Popen("git pull", stdout=subprocess.PIPE, shell=True)
 
@@ -74,7 +74,7 @@ def gitpull(update: Update, context: CallbackContext):
 @dev_plus
 def restart(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        "Memulai instance baru dan mematikan yang ini."
+        "Memulai ulang dan menghidupkan kembali bot."
     )
 
     os.system("restart.bat")
