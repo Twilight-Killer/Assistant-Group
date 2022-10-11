@@ -10,13 +10,13 @@ from FallenRobot import telethn as tgbot
 from FallenRobot.events import register
 
 edit_time = 5
-""" =======================FALLEN ROBOT====================== """
-file1 = "https://telegra.ph/file/9a85d0a873e2dd80d278d.jpg"
-file2 = "https://telegra.ph/file/9e7815284031452afa9e5.jpg"
-file3 = "https://telegra.ph/file/dcc5e003287f69acea368.jpg"
-file4 = "https://telegra.ph/file/ed1ce7fee94f46b0f671e.jpg"
-file5 = "https://telegra.ph/file/701028ce085ecfa961a36.jpg"
-""" =======================FALLEN ROBOT====================== """
+""" =======================HAOTOGEL OFFICIAL====================== """
+file1 = "https://te.legra.ph/file/e99b18a59987bc94d8a00.jpg"
+file2 = "https://te.legra.ph/file/e99b18a59987bc94d8a00.jpg"
+file3 = "https://te.legra.ph/file/286ecf92083b9fbdee502.jpg"
+file4 = "https://te.legra.ph/file/a9a7e32b03de74be666e1.jpg"
+file5 = "https://te.legra.ph/file/eba78dc0cf93fd38a9313.jpg"
+""" =======================HAOTOGEL OFFICIAL====================== """
 
 
 @register(pattern="/myinfo")
@@ -24,11 +24,11 @@ async def proboyx(event):
     await event.get_chat()
     datetime.utcnow()
     firstname = event.sender.first_name
-    button = [[custom.Button.inline("information", data="informations")]]
+    button = [[custom.Button.inline("informasi", data="informations")]]
     on = await bot.send_file(
         event.chat_id,
         file=file2,
-        caption=f"Hey {firstname}, \n Click on the button below \n to get info about you",
+        caption=f"Hey {firstname}, \n Klik tombol di bawah ini \n untuk mendapatkan info tentang Kamu",
         buttons=button,
     )
 
