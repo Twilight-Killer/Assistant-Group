@@ -453,16 +453,18 @@ def Source_about_callback(update: Update, context: CallbackContext):
 Saya {BOT_NAME},
 Bot ini khusus untuk mengelolah grup HAOTOGEL.
 
-Ditulis dengan : [Telethon](https://github.com/LonamiWebs/Telethon)
+Ditulis dengan :
+[Telethon](https://github.com/LonamiWebs/Telethon)
 [Pyrogram](https://github.com/pyrogram/pyrogram)
 [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot)
-menggunakan [Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud.mongodb.com) sebagai database.
+menggunakan :
+[Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud.mongodb.com) sebagai database.
 
 
 *Kode pencipta :* [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
-{BOT_NAME} Lisensi [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
+{BOT_NAME} By [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
 © 2022 - 2023 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
 All Rights Reserved.
 """,
