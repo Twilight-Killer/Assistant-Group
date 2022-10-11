@@ -81,37 +81,37 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hai {} 🔥
+Hai {}
 
-๏ Saya {} !
-➻ Bot ini khusus dibuat untuk mengelolah grup.
+Saya {} !
+Bot ini khusus dibuat untuk mengelolah grup **HAOTOGEL**
 
-──────────────────
-๏ Klik tombol dibawah untuk mengetahui dan perintah bot ini.
+──────────────────────────────────
+๏ Klik tombol dibawah untuk mengetahui perintah bot.
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴇʟsᴇ ʏᴏᴜ ɢᴇʏ",
+            text="Tambahkan ke grup",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="Help & Perintah", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
-        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="Tentang", callback_data="fallen_"),
+        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="sᴏᴜʀᴄᴇ", callback_data="source_"),
+        InlineKeyboardButton(text="Pencipta", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="Kode", callback_data="source_"),
     ],
 ]
 
 HELP_STRINGS = f"""
-*» {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+*» {BOT_NAME} Fitur Eklusif*
 
 ➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ​.
 ➲ /donate : sᴜᴘᴘᴏʀᴛ ᴍᴇ ʙʏ ᴅᴏɴᴀᴛɪɴɢ ꜰᴏʀ ᴍʏ ʜᴀʀᴅᴡᴏʀᴋ​.
