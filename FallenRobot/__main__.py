@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="I'am Alive Sayang !\n<b>Saya tidak tidur sejak:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -308,7 +308,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "» *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ​​* *{}* :\n".format(
+                "» *Perintah yang tersedia untuk* *{}* :\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -364,8 +364,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
             text=f"Hai, Saya {BOT_NAME}"
-            "\nBot powerfull yang dibuat khusus untuk mengelolah grup HAOTOGEL."
-            "\nHubungi owner untuk menggunakan bot ini."
+            "\nBot yang dibuat khusus untuk mengelolah grup HAOTOGEL."
             "\n\n────────────────────"
             f"\n➻ ᴜᴩᴛɪᴍᴇ » {uptime}"
             f"\n➻ ᴜsᴇʀs » {sql.num_users()}"
@@ -454,7 +453,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
 Saya {BOT_NAME},
 Bot ini khusus untuk mengelolah grup HAOTOGEL.
 
-Ditulis dengan python bantuan : [Telethon](https://github.com/LonamiWebs/Telethon)
+Ditulis dengan : [Telethon](https://github.com/LonamiWebs/Telethon)
 [Pyrogram](https://github.com/pyrogram/pyrogram)
 [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot)
 menggunakan [Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud.mongodb.com) sebagai database.
@@ -464,7 +463,8 @@ menggunakan [Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud
 
 
 {BOT_NAME} Lisensi [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
-© 2022 - 2023 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT}), All Rights Reserved.
+© 2022 - 2023 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
+All Rights Reserved.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
