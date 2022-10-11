@@ -11,11 +11,11 @@ from FallenRobot.events import register
 
 edit_time = 5
 """ =======================HAOTOGEL OFFICIAL====================== """
-file1 = "https://te.legra.ph/file/e99b18a59987bc94d8a00.jpg"
-file2 = "https://te.legra.ph/file/e99b18a59987bc94d8a00.jpg"
-file3 = "https://te.legra.ph/file/286ecf92083b9fbdee502.jpg"
-file4 = "https://te.legra.ph/file/a9a7e32b03de74be666e1.jpg"
-file5 = "https://te.legra.ph/file/eba78dc0cf93fd38a9313.jpg"
+file1 = "https://telegra.ph/file/35c7e093808029b04cc89.jpg"
+file2 = "https://telegra.ph/file/a18854e60e366b849483d.jpg"
+file3 = "https://telegra.ph/file/10ff969e26ab697dc0ada.jpg"
+file4 = "https://telegra.ph/file/9b789c6c8485b6f29ce66.jpg"
+file5 = "https://telegra.ph/file/0e9f6b1968f7a81c7be93.jpg"
 """ =======================HAOTOGEL OFFICIAL====================== """
 
 
@@ -24,11 +24,11 @@ async def proboyx(event):
     await event.get_chat()
     datetime.utcnow()
     firstname = event.sender.first_name
-    button = [[custom.Button.inline("informasi", data="informations")]]
+    button = [[custom.Button.inline("Myinfo", data="informations")]]
     on = await bot.send_file(
         event.chat_id,
         file=file2,
-        caption=f"Hey {firstname}, \n Klik tombol di bawah ini \n untuk mendapatkan info tentang Kamu",
+        caption=f"Hey {firstname},\nKlik tombol di bawah ini\nUntuk mendapatkan info tentang Kamu",
         buttons=button,
     )
 
@@ -65,11 +65,11 @@ async def callback_query_handler(event):
     try:
         boy = event.sender_id
         PRO = await bot.get_entity(boy)
-        LILIE = "POWERED BY DarkiezZzz \n\n"
-        LILIE += f"FIRST NAME : {PRO.first_name} \n"
-        LILIE += f"LAST NAME : {PRO.last_name}\n"
-        LILIE += f"YOU BOT : {PRO.bot} \n"
-        LILIE += f"RESTRICTED : {PRO.restricted} \n"
+        LILIE = "POWERED BY : DarkiezZzz \n\n"
+        LILIE += f"NAMA DEPAN : {PRO.first_name} \n"
+        LILIE += f"NAMA BELAKANG : {PRO.last_name}\n"
+        LILIE += f"KAMU BOT : {PRO.bot} \n"
+        LILIE += f"DIBATASI : {PRO.restricted} \n"
         LILIE += f"USER ID : {boy}\n"
         LILIE += f"USERNAME : {PRO.username}\n"
         await event.answer(LILIE, alert=True)
