@@ -14,7 +14,7 @@ edit_time = 5
 file1 = "https://telegra.ph/file/35c7e093808029b04cc89.jpg"
 file2 = "https://telegra.ph/file/a18854e60e366b849483d.jpg"
 file3 = "https://telegra.ph/file/10ff969e26ab697dc0ada.jpg"
-file4 = "https://telegra.ph/file/9b789c6c8485b6f29ce66.jpg"
+file4 = "https://telegra.ph/file/8023717fe0c53948a2e5a.jpg"
 file5 = "https://telegra.ph/file/0e9f6b1968f7a81c7be93.jpg"
 """ =======================HAOTOGEL OFFICIAL====================== """
 
