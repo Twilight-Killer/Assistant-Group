@@ -457,14 +457,14 @@ Ditulis dengan :
 [Telethon](https://github.com/LonamiWebs/Telethon)
 [Pyrogram](https://github.com/pyrogram/pyrogram)
 [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot)
-menggunakan :
-[Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud.mongodb.com) sebagai database.
+[Sqlalchemy](https://www.sqlalchemy.org)
+[mongodb](https://cloud.mongodb.com)
+
+*PENCIPTA :* [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
-*Kode pencipta :* [DarkiezZzz](https://t.me/DarkiezZzz)
-
-
-{BOT_NAME} By [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
+{BOT_NAME} BY 
+[DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
 © 2022 - 2023 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
 All Rights Reserved.
 """,
@@ -516,7 +516,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Buka dalam private",
+                            text="Buka di private",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
