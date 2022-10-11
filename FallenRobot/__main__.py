@@ -451,20 +451,19 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-*Hay,
 Saya {BOT_NAME},
-Bot ini khusus untuk mengelolah grup HAOTOGEL.*
+Bot ini khusus untuk mengelolah grup HAOTOGEL.
 
-Ditulis dengan python dengan bantuan : [Telethon](https://github.com/LonamiWebs/Telethon)
+Ditulis dengan python bantuan : [Telethon](https://github.com/LonamiWebs/Telethon)
 [Pyrogram](https://github.com/pyrogram/pyrogram)
 [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot)
-dan menggunakan [Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud.mongodb.com) sebagai database.
+menggunakan [Sqlalchemy](https://www.sqlalchemy.org) dan [mongodb](https://cloud.mongodb.com) sebagai database.
 
 
-*Kode pencita saya :* [DarkiezZzz](https://t.me/DarkiezZzz)
+*Kode pencipta :* [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
-{BOT_NAME} dilisensikan di bawah [MIT LICENSE](https://t.me/HaotogelOfficialLivedraw).
+{BOT_NAME} Lisensi [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
 © 2022 - 2023 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT}), All Rights Reserved.
 """,
             parse_mode=ParseMode.MARKDOWN,
@@ -499,7 +498,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ʜᴇʟᴘ​",
+                                text="Help​",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -510,12 +509,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "» Pilih opsi untuk mendapatkan bantuan.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            text="Buka dalam private",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
@@ -523,7 +522,7 @@ def get_help(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            text="Buka disini",
                             callback_data="help_back",
                         )
                     ],
@@ -607,7 +606,7 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = mod_match.group(1)
             module = mod_match.group(2)
             chat = bot.get_chat(chat_id)
-            text = "*{}* has the following settings for the *{}* module:\n\n".format(
+            text = "*{}* Memiliki pengaturan berikut untuk *{}* module:\n\n".format(
                 escape_markdown(chat.title), CHAT_SETTINGS[module].__mod_name__
             ) + CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(
@@ -644,8 +643,8 @@ def settings_button(update: Update, context: CallbackContext):
             next_page = int(next_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "Hai, yang di sana!  Ada beberapa pengaturan untuk {} - pergi ke depan dan memilih apa"
+                "kamu tertarik.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -686,14 +685,14 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "Klik di sini untuk mendapatkan pengaturan chat ini, serta pengaturan Anda."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="sᴇᴛᴛɪɴɢs​",
+                                text="Pengaturan",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -703,7 +702,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "Klik di sini untuk memeriksa pengaturan Anda.."
 
     else:
         send_settings(chat.id, user.id, True)
@@ -721,8 +720,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 1128130156 and DONATION_LINK:
             update.effective_message.reply_text(
-                f"» ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴩᴇʀ ᴏғ {BOT_NAME} sᴏʀᴄᴇ ᴄᴏᴅᴇ ɪs [ᴀɴᴏɴʏᴍᴏᴜs](https://t.me/DarkiezZzz)."
-                f"\n\nʙᴜᴛ ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ᴛᴏ ᴛʜᴇ ᴩᴇʀsᴏɴ ᴄᴜʀʀᴇɴᴛʟʏ ʀᴜɴɴɪɴɢ ᴍᴇ : [ʜᴇʀᴇ]({DONATION_LINK})",
+                f"» Pengembang dari {BOT_NAME} source kode [DarkiezZzz](https://t.me/DarkiezZzz)."
+                f"\n\ntetapi Kamu juga dapat menyumbang kepada orang yang saat ini menjalankan saya : [disini]({DONATION_LINK})",
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
             )
@@ -737,11 +736,11 @@ def donate(update: Update, context: CallbackContext):
             )
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!"
+                "Saya telah PM Kamu tentang menyumbang ke pencipta saya!"
             )
         except Unauthorized:
             update.effective_message.reply_text(
-                "Contact me in PM first to get donation information."
+                "Hubungi saya di PM terlebih dahulu untuk mendapatkan informasi donasi."
             )
 
 
@@ -772,7 +771,7 @@ def main():
                 f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-🔥 {BOT_NAME} IS ACTIVE 🔥
+🔥 {BOT_NAME} 🔥
 
 ┏•❅────✧❅✦❅✧────❅•┓
 ㅤ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
