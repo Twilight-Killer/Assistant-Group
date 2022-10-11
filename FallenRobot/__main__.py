@@ -463,9 +463,10 @@ Ditulis dengan :
 *PENCIPTA :* [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
-{BOT_NAME} BY 
-[DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
-© 2022 - 2023 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
+{BOT_NAME}
+BY : [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
+© 2022 - 2023
+[🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
 All Rights Reserved.
 """,
             parse_mode=ParseMode.MARKDOWN,
