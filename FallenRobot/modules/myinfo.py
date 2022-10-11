@@ -24,7 +24,7 @@ async def proboyx(event):
     await event.get_chat()
     datetime.utcnow()
     firstname = event.sender.first_name
-    button = [[custom.Button.inline("Myinfo", data="informations")]]
+    button = [[custom.Button.inline("Klik", data="informations")]]
     on = await bot.send_file(
         event.chat_id,
         file=file2,
