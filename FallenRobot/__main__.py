@@ -467,7 +467,7 @@ Ditulis dengan :
 BY : [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
 © 2022 - 2023
 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
-All Rights Reserved.
+© All Rights Reserved.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
