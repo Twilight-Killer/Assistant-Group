@@ -25,7 +25,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    m = message.reply("**» sᴇᴀʀᴄʜɪɴɢ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
+    m = message.reply("**» Mencari, mohon tunggu...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -47,7 +47,7 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("» Mengunduh...\n\nMohon tunggu...")
+    m.edit("» Mengunduh...\nMohon tunggu...")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
