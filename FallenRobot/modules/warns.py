@@ -124,7 +124,7 @@ def warn(
             [
                 [
                     InlineKeyboardButton(
-                        "⏭️ Hapus ⏮️",
+                        "🚫 Hapus 🚫",
                         callback_data="rm_warn({})".format(user.id),
                     ),
                 ],
@@ -132,7 +132,7 @@ def warn(
         )
 
         reply = (
-            f"⛔️ PERINGATAN ⛔️\n"
+            f"<b>⛔ PERINGATAN ⛔</b>\n"
             f"• Anggota: {mention_html(user.id, user.first_name)}\n"
             f"• Batas: {num_warns}/{limit}"
         )
@@ -141,11 +141,11 @@ def warn(
 
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#WARN\n"
-            f"<b>Admin:</b> {warner_tag}\n"
-            f"<b>Anggota:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>Alasan:</b> {reason}\n"
-            f"<b>Batas:</b> <code>{num_warns}/{limit}</code>"
+            f"<b>⛔ PERINGATAN ⛔</b>\n"
+            f"Admin: {warner_tag}\n"
+            f"Anggota: {mention_html(user.id, user.first_name)}\n"
+            f"Alasan: {reason}\n"
+            f"Batas: <code>{num_warns}/{limit}</code>"
         )
 
     try:
