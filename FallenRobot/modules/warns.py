@@ -100,7 +100,7 @@ def warn(
         else:  # ban
             chat.kick_member(user.id)
             reply = (
-                f"<code>❗️</code><u>Blokir</u>\n"
+                f"<code>🚷</code><u>Blokir</u>\n"
                 f"<code> </code><code>•  Anggota:</code> {mention_html(user.id, user.first_name)}\n"
                 f"<code> </code><code>•  Batas:</code> {limit}"
             )
@@ -124,7 +124,7 @@ def warn(
             [
                 [
                     InlineKeyboardButton(
-                        "🚫 Hapus 🚫",
+                        "🚫 Hapus peringatan",
                         callback_data="rm_warn({})".format(user.id),
                     ),
                 ],
@@ -132,7 +132,7 @@ def warn(
         )
 
         reply = (
-            f"<b>⛔ PERINGATAN ⛔</b>\n"
+            f" <b>⚠️ PERINGATAN</b>\n"
             f"• Anggota: {mention_html(user.id, user.first_name)}\n"
             f"• Batas: {num_warns}/{limit}"
         )
@@ -141,11 +141,11 @@ def warn(
 
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"<b>⛔ PERINGATAN ⛔</b>\n"
-            f"Admin: {warner_tag}\n"
-            f"Anggota: {mention_html(user.id, user.first_name)}\n"
-            f"Alasan: {reason}\n"
-            f"Batas: <code>{num_warns}/{limit}</code>"
+            f"<b>⚠️ PERINGATAN</b>\n"
+            f"• Admin: {warner_tag}\n"
+            f"• Anggota: {mention_html(user.id, user.first_name)}\n"
+            f"• Alasan: {reason}\n"
+            f"• Batas: <code>{num_warns}/{limit}</code>"
         )
 
     try:
