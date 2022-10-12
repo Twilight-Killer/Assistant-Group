@@ -50,7 +50,7 @@ def report_setting(update: Update, context: CallbackContext):
             if args[0] in ("yes", "on"):
                 sql.set_chat_setting(chat.id, True)
                 msg.reply_text(
-                    "Turned on reporting! Admins who have turned on reports will be notified when /report "
+                    "Aktifkan pelaporan!  Admin yang sudah mengaktifkan report akan dinotifikasi saat /report"
                     "or @admin is called."
                 )
 
@@ -61,7 +61,7 @@ def report_setting(update: Update, context: CallbackContext):
                 )
         else:
             msg.reply_text(
-                f"This group's current setting is: `{sql.chat_should_report(chat.id)}`",
+                f"Pengaturan grup saat ini adalah: `{sql.chat_should_report(chat.id)}`",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -197,7 +197,7 @@ def report(update: Update, context: CallbackContext) -> str:
                     LOGGER.exception("Exception while reporting user")
 
         message.reply_to_message.reply_text(
-            f"{mention_html(user.id, user.first_name)} Pesan ini dilaporkan ke admin.",
+            f"{mention_html(user.id, user.first_name)}, pesan ini dilaporkan ke admin.",
             parse_mode=ParseMode.HTML,
         )
         return msg
@@ -215,9 +215,9 @@ def __chat_settings__(chat_id, _):
 
 def __user_settings__(user_id):
     if sql.user_should_report(user_id) is True:
-        text = "Anda akan menerima laporan dari obrolan yang Anda admin."
+        text = "Anda akan menerima laporan dari obrolan yang Kamu adalah admin nya."
     else:
-        text = "Anda *tidak* akan menerima laporan dari obrolan yang Anda kelola."
+        text = "Kamu *tidak* akan menerima laporan dari obrolan yang Kamu kelola."
     return text
 
 
