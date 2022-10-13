@@ -109,7 +109,7 @@ def add_blackliststicker(update: Update, context: CallbackContext):
         if len(to_blacklist) == 1:
             send_message(
                 update.effective_message,
-                "Stiker <code>{}</code> ditambahkan ke stiker daftar hitam di <b>{}</b>!".format(
+                "Stiker <code>{}</code> ditambahkan ke daftar hitam di <b>{}</b>!".format(
                     html.escape(to_blacklist[0]), html.escape(chat_name)
                 ),
                 parse_mode=ParseMode.HTML,
