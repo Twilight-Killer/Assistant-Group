@@ -124,7 +124,7 @@ def warn(
             [
                 [
                     InlineKeyboardButton(
-                        "🚫 Hapus peringatan",
+                        "🚫 Hapus Peringatan (admin)",
                         callback_data="rm_warn({})".format(user.id),
                     ),
                 ],
