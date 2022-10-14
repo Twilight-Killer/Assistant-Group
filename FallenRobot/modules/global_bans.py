@@ -310,8 +310,8 @@ def ungban(update: Update, context: CallbackContext):
         chat_origin = f"<b>{chat.id}</b>\n"
 
     log_message = (
-        f"#UNGBANNED\n"
-        f"<b>Grup:</b> <code>{chat_origin}</code>\n"
+        f"#UNGLOBAL_BANNED\n"
+        f"<b>Group:</b> <code>{chat_origin}</code>\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>Anggota:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
         f"<b>ID anggota:</b> <code>{user_chat.id}</code>\n"
