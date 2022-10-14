@@ -450,10 +450,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-Saya {BOT_NAME},
-Bot ini khusus untuk mengelolah grup HAOTOGEL.
-
-Ditulis dengan :
+{BOT_NAME},
+Dibuat dengan :
 [Telethon](https://github.com/LonamiWebs/Telethon)
 [Pyrogram](https://github.com/pyrogram/pyrogram)
 [Python-Telegram-Bot](https://github.com/python-telegram-bot/python-telegram-bot)
@@ -579,7 +577,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Modul mana yang ingin Kamu periksa {}'s pengaturan untuk?".format(
+                text="Modul mana yang ingin Kamu periksa di {} pengaturan untuk?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -632,8 +630,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hai, yang di sana! Ada beberapa pengaturan untuk {} - pergi ke depan dan memilih apa "
-                "Kamu tertarik.".format(chat.title),
+                "Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini"
+                "Silahkan klik:.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -646,8 +644,8 @@ def settings_button(update: Update, context: CallbackContext):
             next_page = int(next_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hai, yang di sana!  Ada beberapa pengaturan untuk {} - pergi ke depan dan memilih apa"
-                "kamu tertarik.".format(chat.title),
+                "Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini"
+                "Silahkan klik:.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -659,8 +657,8 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                text="Hai, yang di sana! Ada beberapa pengaturan untuk {} - pergi ke depan dan memilih apa"
-                "Kamu tertarik.".format(escape_markdown(chat.title)),
+                text="Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini"
+                "Silahkan klik:.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
