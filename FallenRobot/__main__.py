@@ -111,7 +111,7 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-*» {BOT_NAME} Fitur Eklusif*
+*» {BOT_NAME} fitur*
 
 ➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ​.
 ➲ /donate : sᴜᴘᴘᴏʀᴛ ᴍᴇ ʙʏ ᴅᴏɴᴀᴛɪɴɢ ꜰᴏʀ ᴍʏ ʜᴀʀᴅᴡᴏʀᴋ​.
@@ -142,7 +142,7 @@ for module_name in ALL_MODULES:
     if imported_module.__mod_name__.lower() not in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
     else:
-        raise Exception("Can't have two modules with the same name! Please change one")
+        raise Exception("Tidak dapat memiliki dua modul dengan nama yang sama! Tolong ubah satu")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="I'am Alive Sayang !\n<b>Saya tidak tidur sejak:</b> <code>{}</code>".format(
+            caption="Saya hidup Sayang !\nSaya tidak tidur sejak:<code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -460,13 +460,13 @@ Ditulis dengan :
 [Sqlalchemy](https://www.sqlalchemy.org)
 [mongodb](https://cloud.mongodb.com)
 
-*PENCIPTA :* [DarkiezZzz](https://t.me/DarkiezZzz)
+*Copyright :* [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
 {BOT_NAME}
-BY : [DUNIA TOGEL OFFICIAL](https://t.me/jepeterus).
-© 2022 - 2023
+[💚 DUNIA TOGEL OFFICIAL 💚](https://t.me/jepeterus).
 [🔥 HAOTOGEL LIVE DRAW 🔥](https://t.me/{SUPPORT_CHAT})
+© 2022 - 2023
 © All Rights Reserved.
 """,
             parse_mode=ParseMode.MARKDOWN,
@@ -570,7 +570,7 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any user specific settings available :'(",
+                "Sepertinya tidak ada pengaturan khusus pengguna yang tersedia :'(",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -579,7 +579,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Which module would you like to check {}'s settings for?".format(
+                text="Modul mana yang ingin Kamu periksa {}'s pengaturan untuk?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -589,8 +589,8 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any chat settings available :'(\nSend this "
-                "in a group chat you're admin in to find its current settings!",
+                "Sepertinya tidak ada pengaturan obrolan yang tersedia :'(\nKirim ini "
+                "dalam obrolan grup tempat Kamu menjadi admin untuk menemukan pengaturannya saat ini!",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -632,8 +632,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "Hai, yang di sana! Ada beberapa pengaturan untuk {} - pergi ke depan dan memilih apa "
+                "Kamu tertarik.".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -659,8 +659,8 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                text="Hi there! There are quite a few settings for {} - go ahead and pick what "
-                "you're interested in.".format(escape_markdown(chat.title)),
+                text="Hai, yang di sana! Ada beberapa pengaturan untuk {} - pergi ke depan dan memilih apa"
+                "Kamu tertarik.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
