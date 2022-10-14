@@ -162,7 +162,7 @@ def gban(update: Update, context: CallbackContext):
 
         return
 
-    message.reply_text("On it!")
+    message.reply_text("Selesai!")
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
@@ -174,12 +174,12 @@ def gban(update: Update, context: CallbackContext):
         chat_origin = "<b>{}</b>\n".format(chat.id)
 
     log_message = (
-        f"#GBANNED\n"
-        f"<b>Berasal dari:</b> <code>{chat_origin}</code>\n"
+        f"#GLOBAL_BANNED\n"
+        f"<b>Group:</b> <code>{chat_origin}</code>\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>GBanned Anggota:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
-        f"<b>GBanned ID Anggota:</b> <code>{user_chat.id}</code>\n"
-        f"<b>Event Stamp:</b> <code>{current_time}</code>"
+        f"<b>Anggota:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
+        f"<b>ID Anggota:</b> <code>{user_chat.id}</code>\n"
+        f"<b>Waktu:</b> <code>{current_time}</code>"
     )
 
     if reason:
