@@ -577,7 +577,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Modul mana yang ingin Kamu periksa di {} pengaturan untuk?".format(
+                text="Modul mana yang ingin Kamu periksa di {}, pengaturan untuk?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -630,8 +630,8 @@ def settings_button(update: Update, context: CallbackContext):
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini"
-                "Silahkan klik:.".format(chat.title),
+                "Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini. "
+                "silahkan klik".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -644,8 +644,8 @@ def settings_button(update: Update, context: CallbackContext):
             next_page = int(next_match.group(2))
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                "Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini"
-                "Silahkan klik:.".format(chat.title),
+                "Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini. "
+                "silahkan klik".format(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
@@ -657,8 +657,8 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
-                text="Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini"
-                "Silahkan klik:.".format(escape_markdown(chat.title)),
+                text="Hai, Ada beberapa pengaturan untuk {} - Klik tombol dibawah ini. "
+                "silahkan klik".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
@@ -686,7 +686,7 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Klik di sini untuk mendapatkan pengaturan chat ini, serta pengaturan Anda."
+            text = "Klik di sini untuk mendapatkan pengaturan chat ini serta pengaturan Anda."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
