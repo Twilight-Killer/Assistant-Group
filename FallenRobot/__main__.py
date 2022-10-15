@@ -363,8 +363,8 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     if query.data == "fallen_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"Hai, Saya {BOT_NAME}"
-            "\n\n────────────────────"
+            text=f"Hai, Saya {BOT_NAME}."
+            "\n────────────────────"
             f"\n➻ ᴜᴩᴛɪᴍᴇ » {uptime}"
             f"\n➻ ᴜsᴇʀs » {sql.num_users()}"
             f"\n➻ ᴄʜᴀᴛs » {sql.num_chats()}"
@@ -457,7 +457,7 @@ Dibuat dengan :
 [Sqlalchemy](https://www.sqlalchemy.org)
 [mongodb](https://cloud.mongodb.com)
 
-*COPYRIGHT :* [DarkiezZzz](https://t.me/DarkiezZzz)
+® COPYRIGHT : [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
 {BOT_NAME}
