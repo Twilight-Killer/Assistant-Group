@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="<code>Saya alive !\nSaya aktif sejak:</code> <code>{}</code>".format(
+            caption="<code>Aktif: {}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
