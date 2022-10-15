@@ -364,7 +364,6 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
             text=f"Hai, Saya {BOT_NAME}"
-            "\nBot yang dibuat khusus untuk mengelolah grup HAOTOGEL."
             "\n\n────────────────────"
             f"\n➻ ᴜᴩᴛɪᴍᴇ » {uptime}"
             f"\n➻ ᴜsᴇʀs » {sql.num_users()}"
@@ -458,7 +457,7 @@ Dibuat dengan :
 [Sqlalchemy](https://www.sqlalchemy.org)
 [mongodb](https://cloud.mongodb.com)
 
-*Copyright :* [DarkiezZzz](https://t.me/DarkiezZzz)
+*COPYRIGHT :* [DarkiezZzz](https://t.me/DarkiezZzz)
 
 
 {BOT_NAME}
@@ -670,9 +669,9 @@ def settings_button(update: Update, context: CallbackContext):
         query.message.delete()
     except BadRequest as excp:
         if excp.message not in [
-            "Message is not modified",
+            "Pesan tidak diubah",
             "Query_id_invalid",
-            "Message can't be deleted",
+            "Pesan tidak dapat dihapus",
         ]:
             LOGGER.exception("Exception in settings buttons. %s", str(query.data))
 
@@ -686,7 +685,7 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Klik di sini untuk mendapatkan pengaturan chat ini serta pengaturan Anda."
+            text = "Klik di sini untuk mendapatkan pengaturan chat ini beserta pengaturan Anda."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
@@ -756,11 +755,11 @@ def migrate_chats(update: Update, context: CallbackContext):
     else:
         return
 
-    LOGGER.info("Migrating from %s, to %s", str(old_chat), str(new_chat))
+    LOGGER.info("Bermigrasi dari %s, ke %s", str(old_chat), str(new_chat))
     for mod in MIGRATEABLE:
         mod.__migrate__(old_chat, new_chat)
 
-    LOGGER.info("Successfully migrated!")
+    LOGGER.info("Berhasil bermigrasi!")
     raise DispatcherHandlerStop
 
 
@@ -784,7 +783,7 @@ def main():
             )
         except Unauthorized:
             LOGGER.warning(
-                f"Bot isn't able to send message to @{SUPPORT_CHAT}, go and check!"
+                f"Bot tidak dapat mengirim pesan ke @{SUPPORT_CHAT}, pergi dan cek!"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
@@ -820,7 +819,7 @@ def main():
     dispatcher.add_error_handler(error_callback)
 
     if WEBHOOK:
-        LOGGER.info("Using webhooks.")
+        LOGGER.info("Menggunakan webhook.")
         updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
 
         if CERT_PATH:
@@ -829,7 +828,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Using long polling.")
+        LOGGER.info("Menggunakan polling panjang.")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
