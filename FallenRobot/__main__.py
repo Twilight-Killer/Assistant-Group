@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="Saya hidup Sayang !\nSaya tidak tidur sejak:<code>{}</code>".format(
+            caption="<code>Saya alive !\nSaya aktif sejak:</code> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -450,7 +450,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-{BOT_NAME},
+{BOT_NAME}.
 Dibuat dengan :
 [Telethon](https://github.com/LonamiWebs/Telethon)
 [Pyrogram](https://github.com/pyrogram/pyrogram)
@@ -561,7 +561,7 @@ def send_settings(chat_id, user_id, user=False):
             )
             dispatcher.bot.send_message(
                 user_id,
-                "These are your current settings:" + "\n\n" + settings,
+                "Ini adalah pengaturan Anda saat ini:" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN,
             )
 
