@@ -44,7 +44,7 @@ requests
 secureme
 search_engine_parser
 spongemock
-sqlalchemy==1.4.41
+sqlalchemy==1.4.43
 telegram
 telegraph
 telethon==1.25.2
