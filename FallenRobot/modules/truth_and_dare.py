@@ -1,8 +1,10 @@
 from telegram import Update
-from telegram.ext import CallbackContext, CommandHandler
-from TruthDarePy import TD
+from telegram.ext import CallbackContext
 
 from FallenRobot import dispatcher
+from FallenRobot.modules.disable import DisableAbleCommandHandler
+
+from TruthDarePy import TD
 
 love = TD()
 
